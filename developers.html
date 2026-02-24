@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developers | DocumentCurrency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<nav class="topnav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">DocumentCurrency <span>Enterprise</span></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="developers.html">Developers</a>
+      <a href="enterprise.html">Enterprise</a>
+      <a href="registry.html">Registry</a>
+      <a href="verification.html">Verify</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <div class="container">
+    <h1 class="h1">Developer Hub</h1>
+    <p class="lede">Integrate with DOC.USD, TransitCloud rails, and registry verification.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="card half">
+        <h2 class="h2">Standard Headers</h2>
+        <div class="code">X-DOC-SHA256: 0x...
+X-DOC-CID: Qm...
+X-DOC-SIG: ...
+X-DOC-REG: registry-name</div>
+        <p class="small">Use these headers when transmitting instruments through TransitCloud.</p>
+      </div>
+
+      <div class="card half">
+        <h2 class="h2">Hash-First Workflow</h2>
+        <div class="code">1) Canonicalize JSON
+2) Compute SHA-256
+3) Pin artifact to IPFS → CID
+4) Publish registry mapping
+5) Verify independently</div>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">Public APIs</h2>
+        <div class="code">/api/registry   → JSON registry mappings
+/api/evidence   → protocol evidence + anchors</div>
+        <p class="small">If you’re running the Next.js Developer Edition, serve these endpoints read-only for integrations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer"><div class="container">Developer Edition • DocumentCurrency</div></div>
+</body>
+</html>
